@@ -5,26 +5,14 @@ Testing and benchmarking AnnotationHub on Azure
 We would like to receive reports on performance of two cloud providers
 for AnnotationHub resources.
 
-## Azure
+# Steps
 
-Start a fresh R session, and run
 ```
-td = tempdir()
-BiocManager::install("Bioconductor/AnnotationHub", ref="azureTesting", force=TRUE)
-system.time(ah <- AnnotationHub::AnnotationHub(cache=td))
-system.time(z <- ah[["AH90000"]])  # not great -- it includes the R conversion -- can we just use fetch API call?
-system.time(z <- ah[["AH90001"]])
+BiocManager::install("vjcitn/AHtestAzure")
+library(AHtestAzure)
+report_comparisons([string describing your location], [CSV file destination for timings])
 ```
 
-## Amazon
-
-Start a fresh R session, and run
-```
-td = tempdir()
-BiocManager::install("Bioconductor/AnnotationHub", ref="master", force=TRUE)
-system.time(ah <- AnnotationHub::AnnotationHub(cache=td))
-system.time(z <- ah[["AH90000"]])
-system.time(z <- ah[["AH90001"]])
-```
+Upload the file generated as an issue on this repo.  Use your location to name the issue.
 
 
