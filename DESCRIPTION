@@ -1,6 +1,6 @@
 Package: AHtestAzure
 Title: Testing AnnHub transition to Azure
-Version: 0.0.1
+Version: 0.0.2
 Authors@R:
     person(given = "Vince",
            family = "Carey",
