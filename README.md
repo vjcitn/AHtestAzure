@@ -10,7 +10,7 @@ for AnnotationHub resources.
 ```
 BiocManager::install("vjcitn/AHtestAzure")
 library(AHtestAzure)
-report_comparisons([string describing your location], [CSV file destination for timings])
+report_comparison([string describing your location], [CSV file destination for timings])
 ```
 
 Upload the file generated as an issue on this repo.  Use your location to name the issue.
